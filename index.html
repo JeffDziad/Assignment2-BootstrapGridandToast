@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Bootstrap</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS-->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/client.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    </style>
+</head>
+<body>
+
+    <!-- toast -->
+    <div id="toast" class="toast">
+    <div class="toast-header">
+        <strong class="mr-auto" id="product">Product Name</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Discount Code: <strong id="code">CODE</strong>
+    </div>
+    </div>
+
+     <!-- navbar -->
+     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><i class="far fa-compass"></i>&nbspNorthwind</a>
+        <!--Nav Items-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-database"></i>&nbspProducts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        <a class="dropdown-item" href="#"><i class="fab fa-audible"></i>&nbspBrowse Categories</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-search"></i>&nbspProduct Search</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-tag"></i>&nbspCurrent Discounts</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="customerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-users"></i>&nbspCustomers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="customerDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i>&nbspAccount</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i>&nbspRegister</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i>&nbspSign In</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto d-none d-md-block">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Products" aria-label="Search">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i><span>Search</span></button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="jumbotron container-f mb-0">
+            <h1 class="display-4">Northwind!</h1>
+            <p class="lead">We have the best prices and selection of high quality foods & beverages on the planet! Check out our featured discounts below.</p>
+            <hr class="my-4">
+            <p>For spectacular international quisuine, look no further.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Order Now&nbsp<i class="fas fa-angle-double-right"></i></a>
+            </p>
+          </div>
+        <!-- grid -->
+        <div class="row">
+            <div class="col-md m-3 p-3 discounts">
+                <h3>Tis the seasoning</h3>
+                <div class="mb-4">
+                    Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+                    You don't want to make Chef Anton mad, do you?
+                </div>
+                <i>Discount expires: 8/24/2021</i><br />
+                <a href="#" class="code" data-code="CAIS229" data-name="Chef Anton's Italian Seasoning"><i class="far fa-hand-point-right"></i> Discount Code</a>
+            </div>
+            <div class="col-md m-3 p-3 discounts">
+                <h3>Get back to Work!</h3>
+                <div class="mb-4">
+                    Are you experiencing back pain! Well too bad!
+                    Order our product!
+                </div>
+                <i>Discount expires: 9/24/2029</i><br />
+                <a href="#" class="code" data-code="BACKPAIN99" data-name="Back Pain Supplement"><i class="far fa-hand-point-right"></i> Discount Code</a>
+            </div>
+            <div class="col-md m-3 p-3 discounts">
+                <h3>First come, First serve!</h3>
+                <div class="mb-4">
+                    50% discount on all Wish.com purchases.
+                    <p><small>Shipping multiplied by 10<sup>10</sup></small></p>
+                </div>
+                <i>Discount expires: 4/10/2022</i><br />
+                <a href="#" class="code" data-code="IWISHED" data-name="Wish.com Discount"><i class="far fa-hand-point-right"></i> Discount Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!--jQuery and Bootstrap Js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- custom js-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
